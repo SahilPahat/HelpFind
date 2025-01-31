@@ -305,10 +305,10 @@ class Home extends Component {
               <MapView
               style={ styles.map }
               initialRegion={{
-                latitude: Platform.OS === 'ios' ? 30.5852 : this.state.mapRegion.latitude,
-                longitude: Platform.OS === 'ios' ? 36.2384 : this.state.mapRegion.longitude,
-                latitudeDelta: Platform.OS === 'ios' ? 0.00922*1.5 : this.state.mapRegion.latitudeDelta,
-                longitudeDelta: Platform.OS === 'ios' ? 0.00421*1.5 : his.state.mapRegion.latitudeDelta
+                latitude: Platform.OS === 'ios' ? 30.5852 : 30.5852,
+                longitude: Platform.OS === 'ios' ? 36.2384 : 30.5852,
+                latitudeDelta: Platform.OS === 'ios' ? 0.00922*1.5 : 0.00922*1.5,
+                longitudeDelta: Platform.OS === 'ios' ? 0.00421*1.5 : 0.00421*1.5, 
               }}
             > 
             

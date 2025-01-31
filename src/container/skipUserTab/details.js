@@ -32,7 +32,7 @@ export default class HomeDetails extends Component {
     }
     
     render() {        
-        var item = this.props.navigation.state.params.item;
+        var item = this.props?.route?.params?.item;
         var postTime = moment(item.post_date).format('Do MMM YYYY h A');
         return (
             <View style={styles.container}>

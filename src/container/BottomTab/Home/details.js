@@ -29,9 +29,9 @@ export default class HomeDetails extends Component {
     }
     
     render() {
-        var item = this.props.navigation.state.params.item;
-        var userId = this.props.navigation.state.params.userId;
-        var token = this.props.navigation.state.params.token;
+        var item = this.props?.route?.params?.item;
+        var userId = this.props?.route?.params?.userId;
+        var token = this.props?.route?.params?.token;
 
         var postTime = moment(item.post_array.post_date).format('Do MMM YYYY h A');
         var sharedUserName = null

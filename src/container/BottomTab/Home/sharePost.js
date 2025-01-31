@@ -10,6 +10,7 @@ import {
   TextInput,
   
   ImageStore,
+  ActivityIndicator,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import ImagePicker from 'react-native-image-picker';
@@ -34,28 +35,28 @@ class SharedPost extends Component {
       );
 
     this.state = {
-        postImage: props.navigation.state.params.item.post_image,
-        postId: props.navigation.state.params.item.post_array.ID,
-        title: props.navigation.state.params.item.post_array.post_title,
-        details: props.navigation.state.params.item.post_array.post_content,
+        postImage: props?.route?.params?.item.post_image,
+        postId: props?.route?.params?.item.post_array.ID,
+        title: props?.route?.params?.item.post_array.post_title,
+        details: props?.route?.params?.item.post_array.post_content,
         warningTitle : 'black',
         warningDetails: 'black',
         warningImage: 'black',
         warningAddress: 'black',
         showFullAddressPage: false,
         fullAddress: '',
-        cityName: props.navigation.state.params.item.post_meta !== undefined ? 
-                    props.navigation.state.params.item.post_meta.city !== undefined ? 
-                        props.navigation.state.params.item.post_meta.city.length > 0 ?
-                            props.navigation.state.params.item.post_meta.city[0] : '' : '' : '',
-        stateName: props.navigation.state.params.item.post_meta !== undefined ? 
-                        props.navigation.state.params.item.post_meta.state !== undefined ? 
-                            props.navigation.state.params.item.post_meta.state.length > 0 ?
-                                props.navigation.state.params.item.post_meta.state[0] : '' : '' : '',
-        countryName: props.navigation.state.params.item.post_meta !== undefined ? 
-                        props.navigation.state.params.item.post_meta.country !== undefined ? 
-                            props.navigation.state.params.item.post_meta.country.length > 0 ?
-                                props.navigation.state.params.item.post_meta.country[0] : '' : '' : '',
+        cityName: props?.route?.params?.item.post_meta !== undefined ? 
+                    props?.route?.params?.item.post_meta.city !== undefined ? 
+                        props?.route?.params?.item.post_meta.city.length > 0 ?
+                            props?.route?.params?.item.post_meta.city[0] : '' : '' : '',
+        stateName: props?.route?.params?.item.post_meta !== undefined ? 
+                        props?.route?.params?.item.post_meta.state !== undefined ? 
+                            props?.route?.params?.item.post_meta.state.length > 0 ?
+                                props?.route?.params?.item.post_meta.state[0] : '' : '' : '',
+        countryName: props?.route?.params?.item.post_meta !== undefined ? 
+                        props?.route?.params?.item.post_meta.country !== undefined ? 
+                            props?.route?.params?.item.post_meta.country.length > 0 ?
+                                props?.route?.params?.item.post_meta.country[0] : '' : '' : '',
         newPostImage: '',
         warningMessage: false,
         networkStatus : true,
@@ -168,7 +169,7 @@ class SharedPost extends Component {
     return (
         <View style={styles.mainContainer}>
             <HeaderWithBackButton label={I18n.t('Home.sharedPost.header')} other={this.props.navigation} />
-                <Spinner visible={this.state.IsLoaderVisible} color="black" />
+                <ActivityIndicator visible={this.state.IsLoaderVisible} color="black" />
                 {
                     this.state.warningMessage ?  
                         <View style={{ backgroundColor: 'red' }}>

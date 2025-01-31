@@ -10,6 +10,7 @@ import {
   Alert,
   
   Dimensions,
+  ActivityIndicator,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import PopupDialog from 'react-native-popup-dialog';
@@ -115,7 +116,7 @@ class MyPostComponent extends Component {
 
         return (
         <View style={{ }}>
-            <Spinner visible={this.state.isLoaderVisible} color="black" />
+            <ActivityIndicator visible={this.state.isLoaderVisible} color="black" />
             {
                 this.state.warningMessage ?  
                     <View style={{ backgroundColor: 'red' }}>

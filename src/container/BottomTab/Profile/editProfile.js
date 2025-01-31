@@ -10,7 +10,8 @@ import {
     ImageBackground,
     TouchableOpacity,
     
-    Alert
+    Alert,
+    ActivityIndicator
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Spinner from 'react-native-loading-spinner-overlay';
@@ -43,20 +44,20 @@ class EditProfile extends Component {
       showFullAddressPage : false,
       hidePassword : true,
       showInterestedCityPage : false,
-      firstname: props.navigation.state.params.first_name === '' ? '' : props.navigation.state.params.first_name,
-      lastname: props.navigation.state.params.last_name === '' ? '' : props.navigation.state.params.last_name, 
-      cityName : props.navigation.state.params.city === '' ? '' : props.navigation.state.params.city,
-      stateName : props.navigation.state.params.state,
-      countryName : props.navigation.state.params.country === '' ? props.navigation.state.params.country.value : '',
-      profileImage : props.navigation.state.params.user_image === null ? null : props.navigation.state.params.user_image,
-      profileEmail : props.navigation.state.params.data[0].user_email,
+      firstname: props?.route?.params?.first_name === '' ? '' : props?.route?.params?.first_name,
+      lastname: props?.route?.params?.last_name === '' ? '' : props?.route?.params?.last_name, 
+      cityName : props?.route?.params?.city === '' ? '' : props?.route?.params?.city,
+      stateName : props?.route?.params?.state,
+      countryName : props?.route?.params?.country === '' ? props?.route?.params?.country.value : '',
+      profileImage : props?.route?.params?.user_image === null ? null : props?.route?.params?.user_image,
+      profileEmail : props?.route?.params?.data[0].user_email,
       password : '',
       fullAddress : '',
       base64ImagePath: '',
       wrongInformation : '',
 
       
-      phone: props.navigation.state.params.phone === '' ? props.navigation.state.params.phone : '',
+      phone: props?.route?.params?.phone === '' ? props?.route?.params?.phone : '',
       secureTextEntry: true,
 
       warningEmail : false,
@@ -201,7 +202,7 @@ selectPhotoTapped() {
 
     return (
       <View style={{ }}>
-      <Spinner visible={this.state.IsLoaderVisible} color="black" />
+      <ActivityIndicator visible={this.state.IsLoaderVisible} color="black" />
       {
         this.state.showFullAddressPage ?
             <View style={{ flex: 1 }}>

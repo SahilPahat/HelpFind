@@ -10,6 +10,7 @@ import {
   TextInput,
   
   ImageStore,
+  ActivityIndicator,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import ImagePicker from 'react-native-image-picker';
@@ -178,7 +179,7 @@ class AddNewPost extends Component {
 
     return (
         <View style={styles.mainContainer}>
-            <Spinner visible={this.state.isLoaderVisible} color="black" />
+            <ActivityIndicator visible={this.state.isLoaderVisible} color="black" />
 
             <HeaderWithBackButton label={this.props.navigation.state.params === undefined ? I18n.t('Home.addPost.headerAddTime') : I18n.t('Home.addPost.headerEditTime') } other={this.props.navigation} />
                 {

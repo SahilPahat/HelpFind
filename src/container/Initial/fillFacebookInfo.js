@@ -27,15 +27,15 @@ class FillFacebookInfo extends Component {
         super(props)
         this.state = {
             facebookPassword : '',
-            facebookEmail : props.navigation.state.params.data.email,
-            facebookImage : props.navigation.state.params.data.picture.data.url,
-            facebookName : props.navigation.state.params.data.name,
+            facebookEmail : props?.route?.params?.data.email,
+            facebookImage : props?.route?.params?.data.picture.data.url,
+            facebookName : props?.route?.params?.data.name,
             facebookWarningNewPassword : '',
             hidePassword : true,
             facebookIsLoaderVisible: false,
             basicData : {
-                isRTL : props.navigation.state.params.basicData.isRTL,
-                selectedLanguage : props.navigation.state.params.basicData.selectedLanguage,
+                isRTL : props?.route?.params?.basicData.isRTL,
+                selectedLanguage : props?.route?.params?.basicData.selectedLanguage,
             }
         }
     }

@@ -39,8 +39,8 @@ export default class MapSearchShow extends Component {
     );
     this.state = {
 
-      data: props.navigation.state.params === undefined ? '' : props.navigation.state.params.data,
-      selectedCity : props.navigation.state.params === undefined ? '' : props.navigation.state.params.selectedCity.length > 0 ? props.navigation.state.params.selectedCity[0] : '',
+      data: props.navigation.state.params === undefined ? '' : props?.route?.params?.data,
+      selectedCity : props.navigation.state.params === undefined ? '' : props?.route?.params?.selectedCity.length > 0 ? props?.route?.params?.selectedCity[0] : '',
       afterData : '',
 
       IsLoaderVisible : true,

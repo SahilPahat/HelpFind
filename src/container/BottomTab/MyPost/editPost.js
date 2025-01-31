@@ -10,6 +10,7 @@ import {
   TextInput,
   
   ImageStore,
+  ActivityIndicator,
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import ImagePicker from 'react-native-image-picker';
@@ -33,10 +34,10 @@ class EditNewPost extends Component {
       );
 
     this.state = {
-        postImage: props.navigation.state.params.item.item.post_image,
-        postId: props.navigation.state.params.item.item.post_id,
-        title: props.navigation.state.params.item.item.post_array.post_title,
-        details: props.navigation.state.params.item.item.post_array.post_content,
+        postImage: props?.route?.params?.item.item.post_image,
+        postId: props?.route?.params?.item.item.post_id,
+        title: props?.route?.params?.item.item.post_array.post_title,
+        details: props?.route?.params?.item.item.post_array.post_content,
         warningTitle : 'black',
         warningDetails: 'black',
         warningImage: 'black',
@@ -162,7 +163,7 @@ class EditNewPost extends Component {
     return (
         <View style={styles.mainContainer}>
             <HeaderWithBackButton label={I18n.t('Home.addPost.headerEditTime')} other={this.props.navigation} />
-                <Spinner visible={this.state.IsLoaderVisible} color="black" />
+                <ActivityIndicator visible={this.state.IsLoaderVisible} color="black" />
                 {
                     this.state.warningMessage ?  
                         <View style={{ backgroundColor: 'red' }}>

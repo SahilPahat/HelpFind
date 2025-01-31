@@ -46,7 +46,7 @@ class ChangePassword extends Component {
       previousPassword : '',
       newPassword : '',
       confirmNewPassword : '',
-      mailId : props.navigation.state.params.data[0].user_email,
+      mailId : props?.route?.params?.data[0].user_email,
 
       warningPreviousPassword : false,
       warningNewPassword : false,

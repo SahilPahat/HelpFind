@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollView, View, NetInfo, Image, Text, Alert, Platform, ImageBackground, TouchableOpacity, AsyncStorage } from 'react-native';
+import { ScrollView, View, NetInfo, Image, Text, Alert, Platform, ImageBackground, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { RaisedTextButton } from 'react-native-material-buttons';
 import { TextField } from 'react-native-material-textfield';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
@@ -13,6 +13,7 @@ import HeaderWithBackButton from '../../component/headerComponentWithBackButton'
 
 import I18n from '../../i18n';
 import LoadingComponent  from '../../component/loadingComponent';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 let styles = {
@@ -343,7 +344,7 @@ class RegistrationScreen extends Component {
   
       return (
         <View style={{ flex : 1 }}>
-          <Spinner visible={this.state.isLoaderVisible} color="black" />
+          <ActivityIndicator visible={this.state.isLoaderVisible} color="black" />
           {
             this.state.showFullAddressPage || this.state.showInterestedCityPage ?
               this.state.showFullAddressPage ?

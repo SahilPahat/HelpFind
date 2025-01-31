@@ -33,7 +33,7 @@ class HomeCommentScreen extends Component {
           I18n.locale = JSON.parse(value)
         )}
     );
-    var data = this.props.navigation.state.params.item.Comment_array.length === 0 ? '' : this.props.navigation.state.params.item.Comment_array.reverse();
+    var data = this.props?.route?.params?.item.Comment_array.length === 0 ? '' : this.props?.route?.params?.item.Comment_array.reverse();
     this.state = {
         blurIn : false,
         comment: '',
@@ -43,10 +43,10 @@ class HomeCommentScreen extends Component {
         warningComment : false,
         uploadComment : '',
         tryAgain: false,
-        postId : props.navigation.state.params.item.post_array.ID,
-        authorName : props.navigation.state.params.item.post_author_name,
-        authorMailId: props.navigation.state.params.item.user_Email,
-        commentParent : props.navigation.state.params.item.Comment_array.length > 0 ? props.navigation.state.params.item.Comment_array[0].comment_parent : '0',
+        postId : props?.route?.params?.item.post_array.ID,
+        authorName : props?.route?.params?.item.post_author_name,
+        authorMailId: props?.route?.params?.item.user_Email,
+        commentParent : props?.route?.params?.item.Comment_array.length > 0 ? props?.route?.params?.item.Comment_array[0].comment_parent : '0',
         data: [
             { id:1, date:"10/10/2018 7:50 am", type:'in', userName : 'ABC Sharma', userImage : require('../../../images/notificationTest3.png'), message: "1st comment by user" },
             { id:2, date:"16/10/2018 8:10 pm", type:'in', userName : 'Rahul Sen', userImage : require('../../../images/notificationTest2.png'), message: "2nd comment by user" } ,
@@ -98,8 +98,8 @@ class HomeCommentScreen extends Component {
           'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            "user_id" : this.props.navigation.state.params.userId,
-            "token" : this.props.navigation.state.params.token,
+            "user_id" : this.props?.route?.params?.userId,
+            "token" : this.props?.route?.params?.token,
             "post_id" : this.state.postId,
           })
       }).then((response) => response.json()).then((responseJson) => {
@@ -182,11 +182,11 @@ class HomeCommentScreen extends Component {
 
   render() {
 
-    var item = this.props.navigation.state.params.item;
+    var item = this.props?.route?.params?.item;
 
     var postTime = moment(item.post_array.post_date).format('Do MMM YYYY h A');
-    var userId = this.props.navigation.state.params.userId;
-    var token = this.props.navigation.state.params.token;
+    var userId = this.props?.route?.params?.userId;
+    var token = this.props?.route?.params?.token;
 
     return (
       <View style={styles.container}>
@@ -265,7 +265,7 @@ class HomeCommentScreen extends Component {
                               }
                               <View>
                                   {
-                                    this.props.navigation.state.params.item.post_array.post_author === this.props.navigation.state.params.userId ? 
+                                    this.props?.route?.params?.item.post_array.post_author === this.props?.route?.params?.userId ? 
                                       <Text style={{ fontSize: 14 }}>{item.comment_author}</Text>
                                       : null
                                   }

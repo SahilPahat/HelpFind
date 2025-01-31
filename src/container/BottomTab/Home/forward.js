@@ -20,7 +20,7 @@ export default class ForwardPost extends Component {
   constructor(props) {
     super(props);
 
-    I18n.locale = props.navigation.state.params.basicData.selectedLanguage;
+    I18n.locale = props?.route?.params?.basicData.selectedLanguage;
     this.state = {
         title: '',
         warningTitle : 'black',
@@ -70,8 +70,8 @@ export default class ForwardPost extends Component {
                 <View style={{ margin: 5 }}>
     
                     <Text style={{ fontSize: 18, color: buttonBackgroundColor, marginTop: 10 }}>{I18n.t('Home.forward.forwardLabelTitle')}</Text>
-                    <Image style={styles.cardImage} source={this.props.navigation.state.params.item.postImage }/>
-                    <Text style={{ margin: 5 }}>{this.props.navigation.state.params.item.postDetails}</Text>
+                    <Image style={styles.cardImage} source={this.props?.route?.params?.item.postImage }/>
+                    <Text style={{ margin: 5 }}>{this.props?.route?.params?.item.postDetails}</Text>
 
 
                     <Text style={{ fontSize: 18, color: this.state.warningTitle, marginTop: 10 }}>{I18n.t('Home.forward.postLabelTitle')}</Text>

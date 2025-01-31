@@ -27,7 +27,7 @@ export default class MyPostDetails extends Component {
     }
     
     render() {
-        var item = this.props.navigation.state.params.item;
+        var item = this.props?.route?.params?.item;
         var postTime = moment(item.item.post_array.post_date).format('Do MMM YYYY h A');
         return (
             <View style={styles.container}>

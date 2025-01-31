@@ -28,7 +28,7 @@ export default class NotificationDetails extends Component {
     }
     
     render() {
-        var item = this.props.navigation.state.params.item.item;
+        var item = this.props?.route?.params?.item.item;
         return (
             <View style={styles.container}>
                 <HeaderWithBackButton label={I18n.t('Notification.details.header')} other={this.props.navigation} />

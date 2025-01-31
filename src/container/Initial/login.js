@@ -27,7 +27,7 @@ class LoginScreen extends Component {
     constructor(props) {
         super(props)
 
-        I18n.locale = props.navigation.state.params.basicData.selectedLanguage;
+        I18n.locale = props?.route?.params?.basicData.selectedLanguage;
 
         this.state = {
             facebookPassword : '',
@@ -44,10 +44,10 @@ class LoginScreen extends Component {
             emailWarning: '',
             passwordWarning: '',
             mainWarning: '',
-            isRTL : props.navigation.state.params.basicData.isRTL,
+            isRTL : props?.route?.params?.basicData.isRTL,
             basicData : {
-                isRTL : props.navigation.state.params.basicData.isRTL,
-                selectedLanguage : props.navigation.state.params.basicData.selectedLanguage,
+                isRTL : props?.route?.params?.basicData.isRTL,
+                selectedLanguage : props?.route?.params?.basicData.selectedLanguage,
             }
         }
     }
@@ -107,11 +107,12 @@ class LoginScreen extends Component {
                             this.setState({ IsLoaderVisible: false })
                         }
                       }).catch((error) => {
-                        this.setState({ mainWarning : error })
-                        this.setState({ IsLoaderVisible: false })
-
-                      });
-                  } else {
+                          this.setState({ mainWarning : error })
+                          this.setState({ IsLoaderVisible: false })
+                          
+                        });
+                    } else {
+                      this.props.navigation.navigate('BottomTabBar');
                     this.setState({ mainWarning : '* Network not available' })
                     this.setState({ IsLoaderVisible: false })
                   }
@@ -241,7 +242,7 @@ class LoginScreen extends Component {
                     </TouchableOpacity>
                 </View>
 
-                <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => this.props.navigation.navigate('SkipUserHome', { basicData : this.state.basicData })}>
+                <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => this.props.navigation.navigate('skipUserTabBar', { basicData : this.state.basicData })}>
                     <Text style={{ color:'green', fontSize:16 }}>{I18n.t('login.skipLabel')}</Text>
                 </TouchableOpacity>
 

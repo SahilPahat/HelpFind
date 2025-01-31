@@ -39,10 +39,10 @@ export default class HomeCommentScreen extends Component {
         warningComment : false,
         uploadComment : '',
         tryAgain: false,
-        postId : props.navigation.state.params.item.post_array.ID,
-        authorName : props.navigation.state.params.item.post_author_name,
-        authorMailId: props.navigation.state.params.item.user_Email,
-        commentParent : props.navigation.state.params.item.Comment_array.length > 0 ? props.navigation.state.params.item.Comment_array[0].comment_parent : '0',
+        postId : props?.route?.params?.item.post_array.ID,
+        authorName : props?.route?.params?.item.post_author_name,
+        authorMailId: props?.route?.params?.item.user_Email,
+        commentParent : props?.route?.params?.item.Comment_array.length > 0 ? props?.route?.params?.item.Comment_array[0].comment_parent : '0',
         data: [
             { id:1, date:"10/10/2018 7:50 am", type:'in', userName : 'ABC Sharma', userImage : require('../../images/notificationTest3.png'), message: "1st comment by user" },
             { id:2, date:"16/10/2018 8:10 pm", type:'in', userName : 'Rahul Sen', userImage : require('../../images/notificationTest2.png'), message: "2nd comment by user" } ,
@@ -62,7 +62,7 @@ export default class HomeCommentScreen extends Component {
 
   render() {
 
-    var item = this.props.navigation.state.params.item;
+    var item = this.props?.route?.params?.item;
 
     var postTime = moment(item.post_array.post_date).format('Do MMM YYYY h A');
 

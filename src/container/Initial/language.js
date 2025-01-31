@@ -1,75 +1,96 @@
-import React, { Component } from 'react';
-import { ScrollView, View, TouchableOpacity, NetInfo, Text, Image, StyleSheet, AsyncStorage } from 'react-native';
-import { RadioGroup, RadioButton } from 'react-native-flexi-radio-button';
-import { LoginManager } from 'react-native-fbsdk';
+import React, {Component} from 'react';
+import {
+  ScrollView,
+  View,
+  TouchableOpacity,
+  NetInfo,
+  Text,
+  Image,
+  StyleSheet,
+} from 'react-native';
+// import { RadioGroup, RadioButton } from 'react-native-flexi-radio-button';
+import {LoginManager} from 'react-native-fbsdk';
+import {Radio} from 'native-base';
 
-import { buttonBackgroundColor, backgroundColor, textLabelColor } from '../../../env';
+import {
+  buttonBackgroundColor,
+  backgroundColor,
+  textLabelColor,
+} from '../../../env';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default class SelectLanguage extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            basicData : {
-                selectedLanguage : 'en',
-                isRTL : false,
-            },
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      basicData: {
+        selectedLanguage: 'en',
+        isRTL: false,
+      },
+    };
+  }
 
-    static navigationOptions = {
-        header: null
+  static navigationOptions = {
+    header: null,
+  };
+
+  onSelectLanguage(index, value) {
+    if (value === 'english') {
+      this.setState({
+        basicData: {
+          selectedLanguage: 'en',
+          isRTL: false,
+        },
+      });
+    } else {
+      this.setState({
+        basicData: {
+          selectedLanguage: 'ar',
+          isRTL: true,
+        },
+      });
+    }
+  }
+
+  onConfirmButton = () => {
+    // var basicData = this.state.basicData;
+    var basicData = {
+      selectedLanguage: 'en',
+      isRTL: false,
     };
 
+    AsyncStorage.setItem(
+      'selectedLanguage',
+      JSON.stringify(basicData.selectedLanguage),
+    );
+    AsyncStorage.setItem('isRTL', JSON.stringify(basicData.isRTL));
 
-    
+    this.props.navigation.navigate('LoginScreen', {basicData});
+  };
 
-    onSelectLanguage(index, value){
-        if(value === 'english'){
-          this.setState({
-            basicData : {
-                selectedLanguage : 'en',
-                isRTL : false,
-            }
-          })
-        }else{
-          this.setState({
-            basicData : {
-                selectedLanguage : 'ar',
-                isRTL : true,
-            }
-          })
-        }
-    }
+  render() {
+    LoginManager.logOut();
 
-    onConfirmButton = () => {
-        var basicData = this.state.basicData;
-        
-        AsyncStorage.setItem('selectedLanguage', JSON.stringify(basicData.selectedLanguage) );
-        AsyncStorage.setItem('isRTL', JSON.stringify(basicData.isRTL) );
-        
-        this.props.navigation.navigate('LoginScreen', {basicData} )
-    }
-    
+    return (
+      <View style={styles.container}>
+        <ScrollView
+          style={styles.scroll}
+          contentContainerStyle={styles.contentContainer}
+          keyboardShouldPersistTaps="handled">
+          <View style={styles.ImageContainer}>
+            <Image
+              source={require('../../images/logo.png')}
+              style={styles.logoImage}
+            />
+          </View>
 
-    render(){
-        LoginManager.logOut();
+          <Text style={{fontSize: 22, paddingLeft: 15, color: textLabelColor}}>
+            Select Language
+          </Text>
 
-        return (
-            <View style={styles.container}>
-                <ScrollView
-                    style={styles.scroll}
-                    contentContainerStyle={styles.contentContainer}
-                    keyboardShouldPersistTaps='handled'
-                >
-                    <View style={styles.ImageContainer}>
-                        <Image source={require('../../images/logo.png')} style={styles.logoImage} />
-                    </View>
-
-                    
-                    <Text style={{ fontSize: 22, paddingLeft: 15, color: textLabelColor }}>Select Language</Text>
-
-                    <View style={{ marginBottom: 50, marginTop: 5, backgroundColor: 'white' }}>
-                        <RadioGroup
+          <View
+            style={{marginBottom: 50, marginTop: 5, backgroundColor: 'white'}}>
+            {/* <RadioGroup
                             onSelect = {(index, value) => this.onSelectLanguage(index, value)}
                             style={{  }}
                             color={buttonBackgroundColor}
@@ -89,58 +110,68 @@ export default class SelectLanguage extends Component {
                             </View>
                         </RadioButton> 
                         
-                        </RadioGroup>
-                    </View>
-                </ScrollView>
+                        </RadioGroup> */}
+          </View>
+        </ScrollView>
 
-                <View style={styles.footer}>
-                    <TouchableOpacity style={styles.confirmButton} onPress={() => this.onConfirmButton()}>
-                        <Text style={{fontWeight: 'bold', color: 'white', padding: 15, fontSize: 18, textAlign: 'center' }}>CONFIRM / تأكيد</Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
-        )
-    }
+        <View style={styles.footer}>
+          <TouchableOpacity
+            style={styles.confirmButton}
+            onPress={() => this.onConfirmButton()}>
+            <Text
+              style={{
+                fontWeight: 'bold',
+                color: 'white',
+                padding: 15,
+                fontSize: 18,
+                textAlign: 'center',
+              }}>
+              CONFIRM / تأكيد
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    scroll: {
-        backgroundColor: backgroundColor,
-    },
-    container: {
-        flex: 1,
-    },
-    logoImage: {
-        width: 400,
-        height:100,
-        marginBottom: 20,
-    },
-    ImageContainer: {
-        marginTop: 110,
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-    confirmButton: {
-        backgroundColor: buttonBackgroundColor,
-        margin: 5,
-    },
-    footer:{
-        backgroundColor: '#eeeeee',
-        paddingHorizontal:10,
-        padding:5,
-    },
+  scroll: {
+    backgroundColor: backgroundColor,
+  },
+  container: {
+    flex: 1,
+  },
+  logoImage: {
+    width: 400,
+    height: 100,
+    marginBottom: 20,
+  },
+  ImageContainer: {
+    marginTop: 110,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  confirmButton: {
+    backgroundColor: buttonBackgroundColor,
+    margin: 5,
+  },
+  footer: {
+    backgroundColor: '#eeeeee',
+    paddingHorizontal: 10,
+    padding: 5,
+  },
 
-      title: {
-        fontSize: 20,
-        fontWeight: '700',
-        marginBottom: 8,
-      },
-      block: {
-        marginBottom: 16,
-      },
-      label: {
-        fontWeight: '700',
-        marginRight: 8,
-      },
+  title: {
+    fontSize: 20,
+    fontWeight: '700',
+    marginBottom: 8,
+  },
+  block: {
+    marginBottom: 16,
+  },
+  label: {
+    fontWeight: '700',
+    marginRight: 8,
+  },
 });
-
