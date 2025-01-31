@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelpFind</string>
+    <string name="facebook_app_id">356451351597616</string>
+    <string name="fb_login_protocol_scheme">fb356451351597616</string>
+</resources>

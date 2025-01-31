@@ -1,0 +1,174 @@
+{
+    "drawer" : {
+        "Home" : "Home",
+        "MyPost" : "MyPost",
+        "Profile" : "Profile"
+    },
+    "skipUserLoginTab" : {
+        "HomeTab" : "Home"  
+    },
+    "login" : {
+        "Email": "Email",
+        "Password" : "Password",
+        "LOGIN" : "LOGIN",
+        "or Connect with" : "or Connect with",
+        "Create a account? Then" : "Create a account? Then",
+        "Sign in!": "Sign up!",
+        "emailWarning" : "* Please enter valid email address. For example Help@find.com",
+        "passwordWarning" : "* Please enter valid password",
+        "mainWarning" : "* No account found with that email address & password",
+        "skipLabel" : "SKIP"
+    },
+    "registration" : {
+        "header" : "REGISTRATION",
+        "emptyError" : "Should not be empty",
+        "ChooseImageLabel" : "Choose Profile Image",
+        "firstNameLabel" : "First Name",
+        "lastNameLabel" : "Last Name",
+        "phoneLabel" : "Phone Number",
+        "emailAddressLabel" : "Email Address",
+        "passwordLabel" : "Password",
+        "passwordTitle" : "Choose wisely",
+        "selectAddressLabel" : "Address",
+        "interestedCityLabel" : "City",
+        "submitButtonLabel" : "submit"
+    },
+    "citySelectpage" : {
+        "CityPageHeader" : "INTERESTED CITY",
+        "CityPageTitle" : "Select Your Interested City Name",
+        "CityPagePlaceholder" : "Search"
+    },
+    "addressSelectpage" : {
+        "AddressPageHeader" : "ADDRESS",
+        "AddressPageTitle" : "Select Your Address Name",
+        "AddressPagePlaceholder" : "Search"
+    },
+    "skipUserTab": {
+        "home" : {
+            "header" : "HOME",
+            "loginTitle" : "Login",
+            "actionButtonLabel" : "Create an account"
+        },
+        "homeDetails" : {
+            "header" : "HOME DETAILS",
+            "loginTitle" : "Login"
+        }
+    },
+    "Home" : {
+        "index" : {
+            "header" : "HOME",
+            "actionButtonLabel" : "Add New Post",
+            "HideMapLabel" : "Map",
+            "ShowGoogleMapLabel" : "Google Map"
+        },
+        "details" : {
+            "header" : "HOME",
+            "commentLabel" : "Comment",
+            "noCommentLabel" : "No Comment",
+            "sharedLabel" : "Shared Post",
+            "alreadySharedLabel" : "Already Share Post",
+            "locationLabel" : "Location City",
+            "sharedPostLabel" : "Shared this post."
+        },
+        "comments" : {
+            "header" : "COMMENTS",
+            "messagePlaceHolder" : "Write a comment...",
+            "messageJustNowTitle" : "Just Now"
+        },
+        "forward" : {
+            "header" : "FORWARD POST",
+            "forwardLabelTitle" : "Forward this post",
+            "postLabelTitle" : "Post Title",
+            "postTextInputPlaceHolder" : "Say something about this...",
+            "submitButtonLabel" : "FORWARD"
+        },
+        "addPost" : {
+            "headerAddTime" : "ADD POST",
+            "headerEditTime" : "EDIT POST",
+            "postTitle" : "Post Title",
+            "postTitlePlaceHolder" : "label",
+            "postDetails" : "Post Details",
+            "postDetailsPlaceHolder" : "Description",
+            "postImage" : "Post Image (Optional)",
+            "postImagePlaceHolder" : "Add Photo!",
+            "tagFriends" : "Tag Friends",
+            "tagFriendsPlaceHolder" : "Click for tag friends",
+            "submitButtonLabelAddTime" : "ADD POST",
+            "submitButtonLabelEditTime" : "EDIT SUBMIT POST",
+            "postAddress" : "Post Address",
+            "selectAddressTitle" : "Select Post Address City"
+        },
+        "sharedPost" : {
+            "header" : "SHARE POST",
+            "postTitle" : "Share Post Title",
+            "postTitlePlaceHolder" : "label",
+            "postDetails" : "Share Post Details",
+            "postDetailsPlaceHolder" : "Share Description",
+            "postImage" : "Shared Post Image (Optional)",
+            "postImagePlaceHolder" : "Add Photo!",
+            "postAddress" : "Select Shared Post Address",
+            "submitButtonLabelEditTime" : "SUBMIT"
+        },
+        "mainComponent" : {
+            "commentLabel" : "Comment",
+            "noCommentLabel" : "No Comment",
+            "sharedLabel" : "Shared Post",
+            "alreadySharedLabel" : "Already Share Post",
+            "locationLabel" : "Location City",
+            "sharedPostLabel" : "Shared this post."
+        }
+    },
+    "MyPost" : {
+        "index" : {
+            "header" : "MY POST",
+            "noDataFound" : "No Data Found. Please add some post."
+        },
+        "component" : {
+            "editLabel" : "Edit",
+            "deleteLabel" : "Delete",
+            "popupDeleteBoxLabel" : "DELETE POST",
+            "popupDeleteBoxText" : "Are you sure you want to permanently delete this post ?",
+            "popupDeleteBoxYes" : "YES",
+            "popupDeleteBoxNo" : "NO"
+        },
+        "details" : {
+            "header" : "MY POST",
+            "editLabel" : "Edit",
+            "deleteLabel" : "Delete"
+        }
+    },
+    "Notification" : {
+        "index" : {
+            "header" : "NOTIFICATION"
+        },
+        "component" : {
+            
+        },
+        "details" : {
+            "header" : "Notif. Details"
+        }
+    },
+    "Profile" : {
+        "index" : {
+            "header" : "PROFILE",
+            "editLabel" : "Edit",
+            "logoutLabel" : "LogOut",
+            "NameTextLabel" : "Name",
+            "EmailTextLabel" : "Email",
+            "SelectedCityTextLabel" : "Selected City",
+            "SelectedCountryTextLabel" : "Selected Country",
+            "logoutTextLabel" : "Log Out"
+        },
+        "editProfile" : {
+            "header" : "EDIT PROFILE",
+            "changeLabel" : "Change",
+            "nameLabel" : "Name",
+            "selectedCityLabel" : "Selected City",
+            "selectedCountryLabel" : "Selected Country",
+            "placeholderNameLabel" : "Name",
+            "placeholderCityLabel" : "City",
+            "placeholderCountryLabel" : "Country",
+            "submitButtonLabel" : "SUBMIT"
+        }
+    }
+}

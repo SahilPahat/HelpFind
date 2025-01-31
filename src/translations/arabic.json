@@ -1,0 +1,174 @@
+{
+    "drawer" : {
+        "Home" : "الصفحة الرئيسية",
+        "MyPost" : "منشوري",
+        "Profile" : "الملف الشخصي"
+    },
+    "skipUserLoginTab" : {
+        "HomeTab" : "الصفحة الرئيسية"  
+    },
+    "login" : {
+        "Email": "البريد الإلكتروني",
+        "Password" : "كلمه السر",
+        "LOGIN" : "تسجيل الدخول",
+        "or Connect with" : "أو تواصل مع",
+        "Create a account? Then" : "انشاء حساب؟ ثم",
+        "Sign in!": "تسجيل الدخول",
+        "emailWarning" : "* الرجاء إدخال عنوان بريد إلكتروني صالح. على سبيل المثال Help@find.com",
+        "passwordWarning" : "* يرجى إدخال كلمة مرور صالحة",
+        "mainWarning" : "* لا يوجد حساب مع عنوان البريد الإلكتروني وكلمة المرور",
+        "skipLabel" : "تخطى"
+    },
+    "registration" : {
+        "header" : "التسجيل",
+        "emptyError" : "لا ينبغي أن تكون فارغة",
+        "ChooseImageLabel" : "اختر صورة الملف الشخصي",
+        "firstNameLabel" : "الاسم الاول",
+        "lastNameLabel" : "الكنية",
+        "phoneLabel" : "رقم الهاتف",
+        "emailAddressLabel" : "عنوان بريد الكتروني",
+        "passwordLabel" : "كلمه السر",
+        "passwordTitle" : "اختر بحكمة",
+        "selectAddressLabel" : "اختر العنوان",
+        "interestedCityLabel" : "اختر المدينة المهتمة",
+        "submitButtonLabel" : "خضع"
+    },
+    "citySelectpage" : {
+        "CityPageHeader" : "اختر المدينة المهتمة",
+        "CityPageTitle" : "اختر اسم المدينة المهتمة بك",
+        "CityPagePlaceholder" : "بحث"
+    },
+    "addressSelectpage" : {
+        "AddressPageHeader" : "اختر العنوان الخاص بك",
+        "AddressPageTitle" : "اختر اسم العنوان الخاص بك",
+        "AddressPagePlaceholder" : "بحث"
+    },
+    "skipUserTab": {
+        "home" : {
+            "header" : "الصفحة الرئيسية",
+            "loginTitle" : "تسجيل الدخول",
+            "actionButtonLabel" : "انشئ حساب"
+        },
+        "homeDetails" : {
+            "header" : "تفاصيل المنزل",
+            "loginTitle" : "تسجيل الدخول"
+        }
+    },
+    "Home" : {
+        "index" : {
+            "header" : "الرئيسية",
+            "actionButtonLabel" : "اضافة منشور جديد",
+            "HideMapLabel" : "خريطة",
+            "ShowGoogleMapLabel" : "الخريطة"
+        },
+        "details" : {
+            "header" : "الصفحة الرئيسية",
+            "commentLabel" : "تعليق",
+            "noCommentLabel" : "لا تعليق",
+            "sharedLabel" : "المشاركة المشتركة",
+            "alreadySharedLabel" : "بالفعل مشاركة المشاركة",
+            "locationLabel" : "موقع المدينة",
+            "sharedPostLabel" : "شارك هذا المنصب."
+        },
+        "comments" : {
+            "header" : "تعليقات",
+            "messagePlaceHolder" : "أكتب تعليقا...",
+            "messageJustNowTitle" : "في هذة اللحظة"
+        },
+        "forward" : {
+            "header" : "آخر حصة",
+            "forwardLabelTitle" : "إعادة توجيه هذه المشاركة",
+            "postLabelTitle" : "عنوان المشاركة",
+            "postTextInputPlaceHolder" : "قل شيئا عن هذا ...",
+            "submitButtonLabel" : "شارك الآن"
+        },
+        "addPost" : {
+            "headerAddTime" : "أضف منشورا",
+            "headerEditTime" : "تعديل المنشور",
+            "postTitle" : "عنوان المشاركة",
+            "postTitlePlaceHolder" : "ضع الكلمة المناسبة",
+            "postDetails" : "تفاصيل المشاركة",
+            "postDetailsPlaceHolder" : "وصف",
+            "postImage" : "نشر صورة",
+            "postImagePlaceHolder" : "إضافة صورة!",
+            "tagFriends" : "علامة الأصدقاء",
+            "tagFriendsPlaceHolder" : "انقر لأصدقاء العلامة",
+            "submitButtonLabelAddTime" : "أضف منشورا",
+            "submitButtonLabelEditTime" : "تحرير إرسال ما بعد",
+            "postAddress" : "عنوان البريد",
+            "selectAddressTitle" : "اختر Post Address City"
+        },
+        "sharedPost" : {
+            "header" : "آخر حصة",
+            "postTitle" : "عنوان الموضوع",
+            "postTitlePlaceHolder" : "ضع الكلمة المناسبة",
+            "postDetails" : "مشاركة تفاصيل المشاركة",
+            "postDetailsPlaceHolder" : "وصف المشاركة",
+            "postImage" : "صورة المشاركة المشتركة (اختياري)",
+            "postImagePlaceHolder" : "إضافة صورة!",
+            "postAddress" : "حدد عنوان المشاركة المشتركة",
+            "submitButtonLabelEditTime" : "مابعد___ قم بالنشر"
+        },
+        "mainComponent" : {
+            "commentLabel" : "تعليق",
+            "noCommentLabel" : "لا تعليق",
+            "sharedLabel" : "المشاركة المشتركة",
+            "alreadySharedLabel" : "بالفعل مشاركة المشاركة",
+            "locationLabel" : "موقع المدينة",
+            "sharedPostLabel" : "شارك هذا المنصب."
+        }
+    },
+    "MyPost" : {
+        "index" : {
+            "header" : "منشوري",
+            "noDataFound" : "لاتوجد بيانات. الرجاء إضافة بعض المشاركة."
+        },
+        "component" : {
+            "editLabel" : "تصحيح",
+            "deleteLabel" : "حذف",
+            "popupDeleteBoxLabel" : "حذف آخر",
+            "popupDeleteBoxText" : "هل أنت متأكد من أنك تريد حذف هذه المشاركة بشكل دائم؟",
+            "popupDeleteBoxYes" : "نعم فعلا",
+            "popupDeleteBoxNo" : "لا"
+        },
+        "details" : {
+            "header" : "منشوري",
+            "editLabel" : "تصحيح",
+            "deleteLabel" : "حذف"
+        }
+    },
+    "Notification" : {
+        "index" : {
+            "header" : "الإخطار"
+        },
+        "component" : {
+            
+        },
+        "details" : {
+            "header" : "تفاصيل"
+        }
+    },
+    "Profile" : {
+        "index" : {
+            "header" : "الملف الشخصي",
+            "editLabel" : "تصحيح",
+            "logoutLabel" : "الخروج",
+            "NameTextLabel" : "اسم",
+            "EmailTextLabel" : "البريد الإلكتروني",
+            "SelectedCityTextLabel" : "المدينة المختارة",
+            "SelectedCountryTextLabel" : "الدولة المختارة",
+            "logoutTextLabel" : "الخروج"
+        },
+        "editProfile" : {
+            "header" : "تعديل الملف الشخصي",
+            "changeLabel" : "يتغيرون",
+            "nameLabel" : "الخروج",
+            "selectedCityLabel" : "اسم",
+            "selectedCountryLabel" : "البريد الإلكتروني",
+            "placeholderNameLabel" : "اسم",
+            "placeholderCityLabel" : "مدينة",
+            "placeholderCountryLabel" : "بلد",
+            "submitButtonLabel" : "خضع"
+        }
+    }
+}
